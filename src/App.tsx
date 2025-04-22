@@ -81,7 +81,7 @@ function App() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_GROQ_API_KEY}`,
+          'Authorization': `Bearer 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`,
         },
         body: JSON.stringify({
           model: "llama3-70b-8192",
