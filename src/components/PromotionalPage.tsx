@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Sparkles, Rocket, Target, Shield, Trophy } from 'lucide-react';
+import { Zap, Sparkles, Rocket, Target, Shield, Trophy, Code } from 'lucide-react';
+import CodeEditorDemo from './CodeEditorDemo';
 
 const PromotionalPage: React.FC = () => {
   useEffect(() => {
@@ -72,6 +73,32 @@ const PromotionalPage: React.FC = () => {
         >
           Get Started Now
         </motion.button>
+      </motion.div>
+
+      {/* Code Editor Demo Section */}
+      <motion.div 
+        className="container mx-auto px-4 py-16"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="text-center mb-12">
+          <motion.div
+            initial={{ scale: 0.9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="inline-block mb-4"
+          >
+            <Code className="w-12 h-12 text-purple-400" />
+          </motion.div>
+          <h2 className="text-4xl font-bold mb-4">AI-Powered Code Generation</h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Watch as our AI writes clean, optimized code in real-time
+          </p>
+        </div>
+        <div className="max-w-4xl mx-auto">
+          <CodeEditorDemo />
+        </div>
       </motion.div>
 
       {/* Features Grid */}
